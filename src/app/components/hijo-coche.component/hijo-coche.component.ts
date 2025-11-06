@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Coche } from '../../models/coche';
 
 @Component({
@@ -8,11 +8,10 @@ import { Coche } from '../../models/coche';
   styleUrl: './hijo-coche.component.css',
 })
 export class HijoCocheComponent implements OnInit{
-  public car: Coche;
+  @Input() car!: Coche;
   public mensaje: string;
   
   constructor(){
-    this.car = new Coche("Ford","mk2",300,30,false);
     this.mensaje = ""
   }
   comprobarEstado(): boolean{
