@@ -3,17 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { App } from './app';
 import { ListaproductosComponent } from './components/listaproductos.component/listaproductos.component';
+import { MenurutasComponent } from './components/menurutas.component/menurutas.component';
+import { appRoutingProvider, routing } from './app.routing';
 
 @NgModule({
   declarations: [
     App,
-    ListaproductosComponent
+    ListaproductosComponent,
+    MenurutasComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    appRoutingProvider
   ],
   bootstrap: [App]
 })
