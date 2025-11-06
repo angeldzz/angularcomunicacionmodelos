@@ -7,6 +7,8 @@ import { MenurutasComponent } from './components/menurutas.component/menurutas.c
 import { appRoutingProvider, routing } from './app.routing';
 import { PadreCochesComponent } from './components/padre-coches.component/padre-coches.component';
 import { HijoCocheComponent } from './components/hijo-coche.component/hijo-coche.component';
+import { PadredeportesComponent } from './components/padredeportes.component/padredeportes.component';
+import { HijodeporteComponent } from './components/hijodeporte.component/hijodeporte.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { HijoCocheComponent } from './components/hijo-coche.component/hijo-coche
     ListaproductosComponent,
     MenurutasComponent,
     PadreCochesComponent,
-    HijoCocheComponent
+    HijoCocheComponent,
+    PadredeportesComponent,
+    HijodeporteComponent
   ],
   imports: [
     BrowserModule,

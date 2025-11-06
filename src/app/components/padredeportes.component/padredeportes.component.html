@@ -1,0 +1,9 @@
+<div>
+    @if(mensaje){
+        <h3>{{ mensaje }}</h3>
+    }
+    @for(deporte of deportes; track deporte){
+        <app-hijodeporte [sport]="deporte" (seleccionarFavoritoPadre)="seleccionarFavoritoPadre($event)">
+        </app-hijodeporte>
+    }
+</div>
