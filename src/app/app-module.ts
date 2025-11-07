@@ -12,6 +12,7 @@ import { HijodeporteComponent } from './components/hijodeporte.component/hijodep
 import { ComicComponent } from './components/comic.component/comic.component';
 import { LibreriaComponent } from './components/libreria.component/libreria.component';
 import { FormsModule } from '@angular/forms';
+import { ServiceComics } from './services/service.comics';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FormsModule } from '@angular/forms';
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    appRoutingProvider
+    appRoutingProvider,
+    ServiceComics
   ],
   bootstrap: [App]
 })
