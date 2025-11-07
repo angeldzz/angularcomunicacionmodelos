@@ -2,13 +2,13 @@
     <h1>Libreria Comics</h1>
     <div class="createComic">
         <form #comicForm="ngForm">
-            <label>Introduzca titulo</label>
+            <label class="form-label">Introduzca titulo</label>
                 <input type="text" name="cajatitulo" #cajatitulo> <br>
-            <label>Introduzca imagen</label>
+            <label class="form-label">Introduzca imagen</label>
                 <input type="text" name="cajaimagen" #cajaimagen> <br>
-            <label>Introduzca Descriocion</label>
+            <label class="form-label">Introduzca Descripcion</label>
                 <input type="text" name="cajadescripcion" #cajadescripcion> <br>
-            <button (click)="createComic()">Crear Comic</button>
+            <button class="btn btn-primary" (click)="createComic()">Crear Comic</button>
         </form>
     </div>
     <div class="comicFavorito" *ngIf="comicFavorito">

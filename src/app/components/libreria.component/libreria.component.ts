@@ -7,10 +7,8 @@ import { ServiceComics } from '../../services/service.comics';
   standalone: false,
   templateUrl: './libreria.component.html',
   styleUrl: './libreria.component.css',
-  //debemos declarar el servicio para poder recuperarlo
-  // dentro de un constructor
-  providers:[ServiceComics]
 })
+
 export class LibreriaComponent implements OnInit{
     public comics!: Array<Comic>;
     public comicFavorito!: Comic;

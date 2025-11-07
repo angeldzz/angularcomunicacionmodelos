@@ -1,7 +1,9 @@
-<div>
-    <h1>{{ comic.titulo}}</h1>
-    <img src="{{comic.imagen}}" alt="{{comic.titulo }}" style="width: 150px; height: 250px;">
-    <p>{{ comic.descripcion }}</p>
-    <button (click)="marcarFavorito()" style="background: green;">Seleccionar Favorito</button>
-    <button (click)="borrarComic()" style="background: red;">Delete Comic</button>
+<div class="card mt-5" style="width: 18rem;">
+    <img src="{{comic.imagen}}" class="card-img-top" alt="{{comic.titulo}}" style="height: 250px; object-fit: cover;">
+    <div class="card-body">
+        <h5 class="card-title">{{ comic.titulo }}</h5>
+        <p class="card-text">{{ comic.descripcion }}</p>
+        <button (click)="marcarFavorito()" class="btn btn-warning me-2">Seleccionar Favorito</button>
+        <button (click)="borrarComic()" class="btn btn-danger">Delete Comic</button>
+    </div>
 </div>
