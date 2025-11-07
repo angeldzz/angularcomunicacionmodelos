@@ -1,1 +1,13 @@
-<p>libreria.component works!</p>
+<div>
+    <h1>Libreria Comics</h1>
+    <div class="comicFavorito" *ngIf="comicFavorito">
+        <h1>{{ comicFavorito.titulo}}</h1>
+        <img src="{{comicFavorito.imagen}}" alt="{{comicFavorito.titulo }}" style="width: 150px; height: 250px;">
+        <p>{{ comicFavorito.descripcion }}</p>
+    </div>
+    <div class="comics" style="display: flex; justify-content: space-between;">
+        @for(c of comics; track c){
+            <app-comic [comic]="c" (seleccionarFavorito)="seleccionarFavorito($event)"></app-comic>
+        }
+    </div>
+</div>

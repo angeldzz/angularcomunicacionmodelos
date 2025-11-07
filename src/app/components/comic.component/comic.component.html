@@ -1,1 +1,6 @@
-<p>comic.component works!</p>
+<div>
+    <h1>{{ comic.titulo}}</h1>
+    <img src="{{comic.imagen}}" alt="{{comic.titulo }}" style="width: 150px; height: 250px;">
+    <p>{{ comic.descripcion }}</p>
+    <button (click)="marcarFavorito()">Seleccionar Favorito</button>
+</div>

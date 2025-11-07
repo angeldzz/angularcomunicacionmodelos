@@ -3,11 +3,13 @@ import { ListaproductosComponent } from "./components/listaproductos.component/l
 import { ModuleWithProviders } from "@angular/core";
 import { PadreCochesComponent } from "./components/padre-coches.component/padre-coches.component";
 import { PadredeportesComponent } from "./components/padredeportes.component/padredeportes.component";
+import { LibreriaComponent } from "./components/libreria.component/libreria.component";
 
 const appRoutes:Routes = [
     {path:"listaProductos",component:ListaproductosComponent},
     {path:"padreCoches",component:PadreCochesComponent},
     {path:"padreDeportes",component:PadredeportesComponent},
+    {path:"comics",component:LibreriaComponent},
 ]
 export const appRoutingProvider: any[] = [];
 

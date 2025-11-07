@@ -4,6 +4,5 @@ export class Comic{
         public imagen: string,
         public descripcion: string
     ) {
-        
     }
 }
