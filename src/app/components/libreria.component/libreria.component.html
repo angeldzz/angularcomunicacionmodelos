@@ -1,5 +1,16 @@
 <div>
     <h1>Libreria Comics</h1>
+    <div class="createComic">
+        <form #comicForm="ngForm">
+            <label>Introduzca titulo</label>
+                <input type="text" name="cajatitulo" #cajatitulo> <br>
+            <label>Introduzca imagen</label>
+                <input type="text" name="cajaimagen" #cajaimagen> <br>
+            <label>Introduzca Descriocion</label>
+                <input type="text" name="cajadescripcion" #cajadescripcion> <br>
+            <button (click)="createComic()">Crear Comic</button>
+        </form>
+    </div>
     <div class="comicFavorito" *ngIf="comicFavorito">
         <h1>{{ comicFavorito.titulo}}</h1>
         <img src="{{comicFavorito.imagen}}" alt="{{comicFavorito.titulo }}" style="width: 150px; height: 250px;">
@@ -7,7 +18,11 @@
     </div>
     <div class="comics" style="display: flex; justify-content: space-between;">
         @for(c of comics; track c){
-            <app-comic [comic]="c" (seleccionarFavorito)="seleccionarFavorito($event)"></app-comic>
+            <app-comic 
+            [comic]="c" 
+            (seleccionarFavorito)="seleccionarFavorito($event)" 
+            (deleteComic)="deleteComic($event)"
+            ></app-comic>
         }
     </div>
 </div>
